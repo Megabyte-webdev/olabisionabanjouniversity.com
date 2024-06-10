@@ -1,0 +1,153 @@
+#faculties .slider{
+    width: 95%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+#faculties .slider .controls{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+#faculties .slider .dots{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+#faculties .slider .dots .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: none;
+    border: 2px solid var(--primary-blue);
+    cursor: pointer;
+    transition: 0.3s;
+}
+#faculties .slider .dots .dot:hover,
+#faculties .slider .dots .dot.active{
+    background-color: var(--primary-blue);
+    color: inherit;
+}
+#faculties .slider .controls span{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-white);
+    box-shadow: 0 0 2px #676767;
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#faculties .slider .controls span:hover{
+    background: var(--primary-blue);
+    color: var(--secondary-white);
+}
+#faculties .slider ul{
+    width: 135%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    background-color: #efefef;
+    padding: 0 20px;
+    margin: 0 auto;
+    transition: 0.4s;
+}
+#faculties .slider ul li{
+    list-style-type: none;
+    max-width: 350px;
+    width: 90%;
+    min-height: 100px;
+    margin: 10px;
+    padding: 15px;
+    background-color: var(--primary-white);
+    
+}
+#faculties .slider ul li button{
+    
+    margin: 5px 10px;
+    font-size: .9rem;
+    background-color: var(--secondary-blue);
+    color: var(--primary-white);
+    box-shadow: 8px 8px var(--black);
+}
+#faculties .slider ul li button a{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+#faculties .slider ul li button i{
+    margin-left: 5px;
+    font-style: normal;
+}
+#faculties .slider ul li button:hover{
+    background-color: var(--primary-blue);
+    box-shadow: 8px 8px var(--primary-grey);
+}
+#faculties .slider ul li img{
+    width: 100%;
+    max-width: 350px;
+    height: 150px;
+    object-fit: cover;
+    background-color: grey;
+}
+#faculties .slider ul li h3{
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 1.2r    em;
+}
+#faculties .slider ul li span{
+    text-transform: uppercase;
+    color: var(--secondary-blue);
+    font-weight: 500;
+    font-size: .9rem;
+}
+#faculties .slider ul li p{
+    font-size: .9rem;
+    margin: 10px 0;
+    line-height: 1.4;
+    
+}
+
+
+@media screen and (max-width: 780px){
+    #faculties .slider{
+        width: 100%;   
+    }
+	#faculties .slider ul {
+		width: 400%;
+		padding: 10px;
+	}
+	#faculties .slider ul li{
+    margin: 5px;
+	}
+	#faculties .slider .controls span{
+    width: 35px;
+    height: 35px;
+	}
+}
+@media screen and (min-width: 780px) and (max-width: 1200px){
+    #faculties .slider ul {
+		width: 202%;
+	}
+}
