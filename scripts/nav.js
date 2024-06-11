@@ -19,6 +19,9 @@ function toggle() {
         e.onclick=function () {
 			clearNav();
 		}
+        nav.onmouseleave=()=>{
+            clearNav();
+        }
     });
     
     
