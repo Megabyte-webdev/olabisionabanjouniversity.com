@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -14,6 +15,8 @@
     --secondary-white: #EDF3FF;
     --primary-grey: #cccccc;
     --secondary-grey: #FCFCFD;
+    --primary-red: rgba(100, 30, 30, .7);
+    --primary-yellow: goldenrod;
     --nav-main-width: 222px;
     --nav-main-height: 88px;
     --black: #000000;
@@ -51,8 +54,34 @@ button {
     cursor: pointer;
 }
 
+.primary-btn {
+    margin: 10px 0;
+    font-size: .9rem;
+    background-color: var(--secondary-blue);
+    color: var(--primary-white);
+    box-shadow: 8px 8px var(--black);
+}
+
+.primary-btn a {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.primary-btn i {
+    margin-left: 5px;
+    font-style: normal;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-blue);
+    box-shadow: 8px 8px var(--primary-grey);
+}
+
 .container {
     padding: 0 5%;
+    width: 95% !important;
+    margin: 10px auto;
 }
 
 .hide {
@@ -61,7 +90,6 @@ button {
 }
 
 .hero-section {
-    width: 100%;
     height: 650px;
     margin-top: 160px;
     background-color: var(--primary-blue);
@@ -159,19 +187,15 @@ main {
     margin: 10px 0;
 }
 
-#faculties {
-    width: 100%;
-    margin: 10px auto;
+#faculties,
+#communities {
     background-color: var(--secondary-white);
-    padding: 10px;
     position: relative;
+    color: var(--black);
 }
 
-#faculties>* {
-    width: 95%;
-    padding: 0 20px;
-    margin: 20px auto;
-}
+
+
 
 .main-heading {
     font-size: calc(2vmax + .6rem);
@@ -184,53 +208,209 @@ main {
     max-width: max-content;
     padding: 8px;
     margin-bottom: 10px;
-    background-color: rgba(190, 187, 187, 0.651);
+    background-color: rgba(200, 200, 200, .7);
     color: var(--secondary-blue);
     font-size: 1.1rem;
     font-family: sans-serif;
+    text-transform: capitalize;
 }
 
-.vc-section {
+.txt-img-section {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--primary-blue);
     color: var(--primary-white);
-    padding: 10px 0;
+    padding: 3%;
 }
 
-.vc-section>* {
-    max-width: 300px;
-    width: 80%;
-    margin: 20px;
+.txt-img-section>* {
+    flex: 0 1 300px;
+    width: 90%;
+    margin: 10px;
 }
 
-.vc-section .section-label {
-    background: rgba(100, 30, 30, .7);
+.txt-img-section .section-label {
+    background: var(--primary-red);
     color: goldenrod;
 }
 
-.vc-section article {
-    max-width: 600px;
+.txt-img-section article {
+    flex: 1 1 350px;
 }
 
-.vc-section .image {
-    height: 300px;
+.txt-img-section .image,
+.txt-img-section .figure {
     border: 10px solid brown;
 }
 
-.vc-section .image img {
+.txt-img-section .figures {
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-img-section .figure {
+    flex: 0 1 300px;
+    border-width: 5px;
+    position: relative;
+    margin: 10px;
+}
+
+.figure:nth-child(2n) {
+    margin: 10px auto;
+}
+
+.txt-img-section .figure .info {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    width: 89%;
+    margin: 5px auto;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 0 0 2px var(--black);
+    background-color: rgba(100, 100, 100, .7);
+    color: var(--primary-white);
+}
+
+.txt-img-section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.testimonials {
+    justify-content: space-between;
+    background-color: var(--primary-white);
+    color: var(--black);
+}
+
+.about-section {
+    background-color: var(--secondary-white);
+    color: var(--black);
+}
+
+.testimonials .section-label {
+    background-color: var(--secondary-white);
+    color: var(--secondary-blue);
+}
+
+.section-label.light {
+    background-color: rgba(200, 200, 200, .7);
+    color: var(--secondary-blue);
+}
+
+.txt-img-section .slider {
+    flex: 0 0 100%;
+}
+
+.tour {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .6)), url('../images/hero-img.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    
+}
+
+.tour h2 {
+    color: var(--primary-white);
+    font-size: calc(1vmax + 1rem);
+    text-shadow:2px 2px 2px var(--black);
+}
+
+.tour span {
+    color: var(--primary-yellow);
+    font-weight: 550;
+    font-size: calc(1vmax + .8rem);
+    text-shadow:2px 2px 2px var(--black);
+}
+
+#footer {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    line-height: 1.4;
+}
+
+#footer .cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#footer .cols .col {
+    flex: 1 1 150px;
+    padding: 10px;
+    margin: 20px;
+    min-height: 100px;
+}
+#footer .cols .col p{
+    margin: 10px 0;
+}
+#footer hr {
+    width: 90%;
+    display: block;
+}
+#footer .logo {
+    width: 176px;
+    height: 56px;
+}
+
+#footer .foot-section {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#footer .foot-section * {
+    margin: 10px;
+}
+#footer .foot-section small{
+    flex-grow: 1;
+    text-align: center;
+}
+#footer .social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .social-media i{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--primary-white);
+    border-radius: 50px;
+    font-style: normal;
+}
+#footer .copyright {
+    color: var(--primary-grey);
+}
+
 @media screen and (max-width: 900px) {
     .hero-section {
         margin-top: 110px;
-
     }
 
     .hero-img-large {
@@ -252,6 +432,13 @@ main {
         height: calc(1vmax + .8rem) !important;
     }
 
+    .tour {
+        height: 200px;
+    }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1500px) {}
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+    #footer .col{
+        flex: 1 1 40% !important;
+    }
+}
